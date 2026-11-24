@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>INDUSTRYWISE | Predictive Maintenance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">IW</div><div><b>INDUSTRY<span>WISE</span></b><small>INTELLIGENCE PLATFORM</small></div></div>
+  <div class="plant-select"><span class="live-dot"></span><div><small>ACTIVE FACILITY</small><b>Plant 01 · Assembly</b></div><span class="chevron">⌄</span></div>
+  <div class="nav-label">WORKSPACE</div>
+  <nav>
+    <a class="nav-item active" href="#overview"><span>◫</span> Overview <em>01</em></a>
+    <a class="nav-item" href="#machines"><span>▦</span> Machine fleet <em>12</em></a>
+    <a class="nav-item" href="#analytics"><span>⌁</span> Analytics</a>
+    <a class="nav-item" href="#maintenance"><span>⚙</span> Maintenance</a>
+    <a class="nav-item" href="#events"><span>◉</span> Event log <i class="alert-count">3</i></a>
+  </nav>
+  <div class="sidebar-bottom"><div class="system-status"><span class="live-dot"></span><div><b>All systems operational</b><small>EDGE NETWORK CONNECTED</small></div></div><div class="user-card"><div class="avatar">DP</div><div><b>Plant Engineer</b><small>Administrator</small></div><span>•••</span></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">MONDAY, 24 NOVEMBER 2026 <span class="divider">/</span> SHIFT A</div><h1>PLANT <span>OVERVIEW</span></h1></div><div class="top-actions"><div class="connection"><span class="live-dot"></span> LIVE TELEMETRY</div><button class="icon-btn" title="Notifications">♧<i></i></button><button class="export-btn" id="exportBtn">↧ <span>EXPORT REPORT</span></button></div></header>
+<section class="kpi-grid" id="overview">
+ <article class="kpi"><div class="kpi-head">FLEET HEALTH <span class="kpi-icon">⌁</span></div><div class="kpi-value">94.8<span class="unit">%</span></div><div class="kpi-foot"><span class="positive">↑ 2.4%</span> vs last 24 hours</div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+ <article class="kpi"><div class="kpi-head">ACTIVE MACHINES <span class="kpi-icon">▦</span></div><div class="kpi-value">12<span class="unit">/ 14</span></div><div class="kpi-foot"><span class="positive">85.7%</span> fleet utilization</div><div class="kpi-line"><span style="width:85.7%"></span></div></article>
+ <article class="kpi"><div class="kpi-head">ANOMALIES DETECTED <span class="kpi-icon warning">⚠</span></div><div class="kpi-value">03</div><div class="kpi-foot"><span class="negative">2 high priority</span> require attention</div><div class="anomaly-dots"><i></i><i></i><i></i><b>+ 0.8% this shift</b></div></article>
+ <article class="kpi"><div class="kpi-head">DOWNTIME PREVENTED <span class="kpi-icon">◷</span></div><div class="kpi-value">26.4<span class="unit">h</span></div><div class="kpi-foot"><span class="positive">↑ 18.2%</span> this month</div><div class="sparkline"><svg viewBox="0 0 180 34"><path d="M0 28 L20 22 L38 25 L56 13 L75 18 L93 9 L112 15 L130 5 L150 11 L166 3 L180 6"/></svg></div></article>
+</section>
+<section class="visual-layout" id="machines">
+ <article class="panel factory-panel"><div class="panel-head"><div><div class="eyebrow">DIGITAL TWIN <span class="live-tag">● LIVE VIEW</span></div><h2>PRODUCTION FLOOR</h2></div><div class="view-controls"><button class="view-btn active" data-view="orbit">ORBIT</button><button class="view-btn" data-view="top">TOP</button><button class="view-btn" data-view="reset">RESET ↗</button></div></div>
+ <div class="scene-wrap"><div id="scene3d"></div><div class="scene-overlay top-left"><span class="scene-dot"></span> ZONE A / ASSEMBLY LINE</div><div class="scene-overlay bottom-left"><span class="legend-dot green"></span> NORMAL <span class="legend-dot amber"></span> WARNING <span class="legend-dot red"></span> CRITICAL</div><div class="scene-overlay bottom-right">3D DIGITAL TWIN <b>v1.0</b></div><div class="machine-tooltip" id="machineTooltip">MOTOR M-04 <span>HEALTH 96%</span></div></div>
+ <div class="machine-strip"><button class="machine-chip selected" data-machine="M-04"><i class="green"></i><span><b>MOTOR M-04</b><small>Conveyor drive</small></span><strong>96%</strong></button><button class="machine-chip" data-machine="P-02"><i class="amber"></i><span><b>PUMP P-02</b><small>Hydraulic unit</small></span><strong>78%</strong></button><button class="machine-chip" data-machine="R-01"><i class="green"></i><span><b>ROBOT R-01</b><small>Pick & place</small></span><strong>99%</strong></button></div>
+ </article>
+ <article class="panel ai-panel"><div class="panel-head"><div><div class="eyebrow">MACHINE LEARNING ENGINE</div><h2>AI INSIGHTS</h2></div><span class="ai-badge">✦ AI ACTIVE</span></div>
+ <div class="risk-card"><div class="risk-top"><span>HIGHEST RISK ASSET</span><span class="risk-level">● ELEVATED RISK</span></div><h3>PUMP P-02</h3><div class="risk-score"><b>78</b><span>/ 100 health score</span><div class="risk-meter"><i></i></div></div><p>Vibration signature is trending above its 7-day baseline. Bearing wear is a possible contributor.</p></div>
+ <div class="prediction"><div class="prediction-icon">⌁</div><div><small>PREDICTED MAINTENANCE WINDOW</small><b>Within 72 hours</b><span>Confidence estimate: 87%</span></div></div>
+ <div class="insight-title">RECOMMENDED ACTION <span>01</span></div><div class="recommendation"><div class="rec-number">01</div><div><b>Inspect pump drive-end bearing</b><p>Schedule a vibration inspection during the next planned maintenance window.</p><button id="scheduleBtn">SCHEDULE INSPECTION ↗</button></div></div>
+ <div class="ai-foot"><span class="pulse"></span> MODEL UPDATED 2 MIN AGO <span>MODEL: IW-PM-2.4</span></div>
+ </article>
+</section>
+<section class="lower-grid" id="analytics">
+ <article class="panel chart-panel"><div class="panel-head"><div><div class="eyebrow">SENSOR TELEMETRY</div><h2>VIBRATION & TEMPERATURE</h2></div><div class="chart-legend"><span><i class="line-cyan"></i> VIBRATION</span><span><i class="line-amber"></i> TEMPERATURE</span><select id="rangeSelect"><option>LAST 60 MIN</option><option>LAST 24 HRS</option></select></div></div><div class="chart-metrics"><div><small>VIBRATION RMS</small><b id="vibrationValue">4.2 <i>mm/s</i></b></div><div><small>BEARING TEMP.</small><b id="temperatureValue">68.4 <i>°C</i></b></div><div><small>ROTATIONAL SPEED</small><b>1,480 <i>RPM</i></b></div></div><canvas id="telemetryChart" height="155"></canvas><div class="chart-axis"><span>10:00</span><span>10:10</span><span>10:20</span><span>10:30</span><span>10:40</span><span>10:50</span><span>NOW</span></div></article>
+ <article class="panel events-panel" id="events"><div class="panel-head"><div><div class="eyebrow">REAL-TIME MONITORING</div><h2>RECENT EVENTS</h2></div><button class="text-btn" id="viewAllBtn">VIEW ALL ↗</button></div><div class="event-list"><div class="event"><span class="event-symbol red">!</span><div><b>Vibration threshold exceeded</b><small>PUMP P-02 · Bearing sensor</small></div><time>2m ago</time></div><div class="event"><span class="event-symbol amber">↗</span><div><b>Temperature rising trend</b><small>MOTOR M-04 · Thermal sensor</small></div><time>18m ago</time></div><div class="event"><span class="event-symbol green">✓</span><div><b>Predictive model completed</b><small>PLANT 01 · AI inference</small></div><time>31m ago</time></div><div class="event"><span class="event-symbol blue">⌁</span><div><b>Sensor connection restored</b><small>ROBOT R-01 · Edge gateway</small></div><time>1h ago</time></div></div></article>
+</section>
+<footer><span>INDUSTRYWISE <b>●</b> INDUSTRIAL INTELLIGENCE</span><span>DEMO ENVIRONMENT · SYNTHETIC TELEMETRY <span class="footer-sep">|</span> BUILD 1.0.0</span></footer>
+</main></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script><script src="app.js"></script>
+</body></html>
